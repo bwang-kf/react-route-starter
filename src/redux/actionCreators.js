@@ -1,8 +1,14 @@
 import { ACTIONS } from '../constants'
 
-export const fetchNewTime = () => ({
+const host = 'https://andthetimeis.com'
+
+export const fetchNewTime = ({timezone = 'pst', str = 'now'}) => ({
   type: ACTIONS.FETCH_NEW_TIME,
   payload: new Date().toString(),
+  meta: {
+    type: 'api',
+    url: `${host}/${timezone}/${str}.json`,
+  }
 })
 
 export const login = (user) => ({

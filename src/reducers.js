@@ -55,13 +55,13 @@ export const counter = (state=0, action) => {
   }
 }
 
-export const currentTime = (state={}, action) => {
-    switch (action.type) {
-      case ACTIONS.FETCH_NEW_TIME:
-        return new Date().toString()
-      default:
-        return state
-  }
-}
+// export const currentTime = (state={}, action) => {
+//     switch (action.type) {
+//       case ACTIONS.FETCH_NEW_TIME:
+//         return new Date().toString()
+//       default:
+//         return state
+//   }
+// }
 
 // export const rootReducer = combineReducers({colors, sort, currentTime})

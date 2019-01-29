@@ -20,8 +20,8 @@ const mapStateToProps = state => {
 }
 // inject dispatcher function into component via connect
 const mapDispatchToProps = dispatch => ({
-  updateTime: () => dispatch(fetchNewTime()),
-  update: () => dispatch(fetchNewTime()), // same thing, can pass multiple calls
+  updateTime: () => dispatch(fetchNewTime({})),
+  update: () => dispatch(fetchNewTime({})), // same thing, can pass multiple calls
 })
 // https://redux.js.org/recipes/reducing-boilerplate
 export default connect(

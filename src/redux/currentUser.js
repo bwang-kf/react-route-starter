@@ -1,11 +1,12 @@
 import { ACTIONS } from '../constants'
 
-export const userInitialState = {
+// TODO: rename reducer to matches the store state that those reducers will operate on.
+export const initialState = {
   user: {},
   loggedIn: false,
 }
 
-export const userReducer = (state=userInitialState, action) => {
+export const reducer = (state=initialState, action) => {
   switch (action.type) {
     case ACTIONS.LOGIN:
       return {
@@ -23,3 +24,5 @@ export const userReducer = (state=userInitialState, action) => {
       return state;
   }
 }
+
+export default reducer

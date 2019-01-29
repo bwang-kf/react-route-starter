@@ -19,7 +19,6 @@ export const initialState = {
     }
   ],
   sort: "SORTED_BY_TITLE",
-  currentTime: new Date().toString(),
 }
 
 // export const store = createStore(
